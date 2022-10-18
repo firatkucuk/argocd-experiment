@@ -34,6 +34,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3.1.1
         with:
-          context: .
+          context: app
           push: true
           tags: ghcr.io/peel9/peel9:${{ env.BRANCH_NAME }}
