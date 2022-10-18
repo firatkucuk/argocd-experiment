@@ -1,16 +1,19 @@
-name: Maven Package
+name: Container Image Creation
 
 on:
-  pull_request:
   workflow_dispatch:
   push:
     branches:
       - main
       - dev
 
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
+
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       packages: write
@@ -31,6 +34,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3.1.1
         with:
-          context: app/
+          context: .
           push: true
-          tags: ghcr.io/firatkucuk/experiment-argocd:${{ env.BRANCH_NAME }}
+          tags: ghcr.io/peel9/peel9:${{ env.BRANCH_NAME }}
