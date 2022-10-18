@@ -36,4 +36,4 @@ jobs:
         with:
           context: app
           push: true
-          tags: ghcr.io/peel9/peel9:${{ env.BRANCH_NAME }}
+          tags: ghcr.io/firatkucuk/experiment-argocd:${{ env.BRANCH_NAME }}
