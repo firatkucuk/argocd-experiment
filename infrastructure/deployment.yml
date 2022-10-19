@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: experiment-argocd-deployment-app
-        image:  ghcr.io/firatkucuk/experiment-argocd:main
+        image:  ghcr.io/firatkucuk/experiment-argocd:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
