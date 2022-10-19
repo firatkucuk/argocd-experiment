@@ -7,6 +7,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: myalias=gcr.io/firatkucuk/experiment-argocd
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
     argocd-image-updater.argoproj.io/myalias.update-strategy: latest
+    argocd-image-updater.argoproj.io/myalias.allow-tags: "regex:.*"
 spec:
   project: default
 
