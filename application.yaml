@@ -5,9 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: myalias=gcr.io/firatkucuk/experiment-argocd
-    argocd-image-updater.argoproj.io/myalias.force-update: "true"
-    argocd-image-updater.argoproj.io/myalias.update-strategy: latest
-    argocd-image-updater.argoproj.io/myalias.allow-tags: "regex:.*"
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: default
 
