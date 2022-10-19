@@ -4,7 +4,8 @@ metadata:
   name: experiment-argocd-deployment-app
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: gcr.io/firatkucuk/experiment-argocd:main
+    argocd-image-updater.argoproj.io/image-list: myalias=gcr.io/firatkucuk/experiment-argocd:main
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
 spec:
   project: default
 
