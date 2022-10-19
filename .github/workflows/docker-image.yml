@@ -40,6 +40,4 @@ jobs:
         with:
           context: app
           push: true
-          tags:
-            - ghcr.io/firatkucuk/experiment-argocd:${{ env.SHORT_SHA }}
-            - ghcr.io/firatkucuk/experiment-argocd:latest
+          tags: ghcr.io/firatkucuk/experiment-argocd:${{ env.SHORT_SHA }},ghcr.io/firatkucuk/experiment-argocd:latest
